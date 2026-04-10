@@ -1,0 +1,151 @@
+/* -------------------------------------------------------
+   FLASHCARD.CSS — Flashcard game specific styles
+   The card flip uses the same rotateY animation as the
+   match game so both feel visually consistent.
+------------------------------------------------------- */
+
+.screen {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ── Flip scene ── */
+.flashcard-scene {
+    width: 100%;
+    max-width: 560px;
+    perspective: 1000px;
+    margin: 8px 0 4px;
+}
+
+.flashcard {
+    width: 100%;
+    min-height: 340px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.flashcard.flipped {
+    transform: rotateY(180deg);
+}
+
+/* ── Both faces ── */
+.flashcard-face {
+    position: absolute;
+    inset: 0;
+    min-height: 340px;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 24px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 18px var(--shadow);
+    border: 1px solid var(--border);
+}
+
+/* ── Front face (question) ── */
+.flashcard-front {
+    background: var(--card-bg);
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.card-category {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--purple);
+    background: var(--purple-light);
+    padding: 4px 12px;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.card-question {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text);
+    text-align: center;
+    margin: 12px 0 4px;
+    line-height: 1.2;
+}
+
+.card-image {
+    width: 80%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: none;      /* shown by JS only when image exists */
+    margin: 4px auto;
+}
+
+.card-hint {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+    min-height: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 0 8px;
+}
+
+.card-hint.visible {
+    opacity: 1;
+}
+
+.front-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+/* ── Back face (answer) ── */
+.flashcard-back {
+    background: var(--card-bg);
+    transform: rotateY(180deg);
+    justify-content: center;
+    gap: 14px;
+}
+
+.card-full {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--blue);
+    text-align: center;
+}
+
+.card-answer {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+    text-align: center;
+    padding: 0 8px;
+}
+
+.back-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+/* Dark mode tweaks for flashcard */
+body.dark-mode .flashcard-front,
+body.dark-mode .flashcard-back {
+    background: var(--card-bg);
+    border-color: var(--border);
+}
+
+body.dark-mode .card-full {
+    color: #4ea2ff;
+}

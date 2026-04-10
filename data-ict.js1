@@ -1,0 +1,234 @@
+/* -------------------------------------------------------
+   DATA-ICT.JS — ICT Subject Data
+   Each entry follows the shared schema:
+     acronym   : short term or concept name (shown on match card / flashcard front)
+     full      : full name or one-line definition
+     hint      : nudge shown before reveal
+     answer    : full explanation shown on flashcard back
+     category  : used for filtering in both games
+     subject   : always "ICT" in this file
+     isAcronym : true = entry is eligible for the match game
+     image     : optional image path (can be "" if not used)
+------------------------------------------------------- */
+
+const dataICT = [
+
+    /* ── Networking ── */
+    {
+        acronym:   "HTTP",
+        full:      "Hypertext Transfer Protocol",
+        hint:      "The foundation of how web pages are requested and sent.",
+        answer:    "HTTP is the protocol used to transfer data between a web browser and a server. It defines how messages are formatted and transmitted, and what actions web servers and browsers should take in response to various commands.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "HTTPS",
+        full:      "Hypertext Transfer Protocol Secure",
+        hint:      "Like HTTP but with encryption.",
+        answer:    "HTTPS is the secure version of HTTP. It uses SSL/TLS encryption to protect data transmitted between a browser and a server, keeping login details, payment info, and personal data safe from interception.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "DNS",
+        full:      "Domain Name System",
+        hint:      "Translates website names into numbers.",
+        answer:    "DNS acts like a phone book for the internet. It translates human-readable domain names (like www.google.com) into IP addresses that computers use to identify each other on a network.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "IP",
+        full:      "Internet Protocol",
+        hint:      "Every device on a network needs one of these.",
+        answer:    "IP is the set of rules governing how data packets are sent and received over the internet. Every device connected to the internet has an IP address which uniquely identifies it on the network.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "URL",
+        full:      "Uniform Resource Locator",
+        hint:      "The full address you type into a browser.",
+        answer:    "A URL is the complete web address used to locate a resource on the internet. It includes the protocol (https://), the domain name, and the specific path to the resource.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "LAN",
+        full:      "Local Area Network",
+        hint:      "A network within a single building or campus.",
+        answer:    "A LAN connects computers and devices within a limited area such as a home, school, or office building. Devices on a LAN can share files and resources like printers without accessing the internet.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "WAN",
+        full:      "Wide Area Network",
+        hint:      "A network that spans cities or countries.",
+        answer:    "A WAN connects networks over large geographic areas. The internet is the largest WAN in the world. Businesses use WANs to connect offices in different cities or countries.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "VPN",
+        full:      "Virtual Private Network",
+        hint:      "Creates a secure tunnel over the internet.",
+        answer:    "A VPN encrypts your internet connection and routes it through a server in another location, masking your IP address and protecting your data from interception, especially on public Wi-Fi.",
+        category:  "Networking",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+
+    /* ── Web & Software ── */
+    {
+        acronym:   "HTML",
+        full:      "Hypertext Markup Language",
+        hint:      "The structure of every web page.",
+        answer:    "HTML is the standard markup language used to create web pages. It defines the structure of web content using elements represented by tags such as headings, paragraphs, links, and images.",
+        category:  "Web & Software",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "CSS",
+        full:      "Cascading Style Sheets",
+        hint:      "Controls how HTML looks on screen.",
+        answer:    "CSS is a stylesheet language used to describe the presentation of HTML documents. It controls layout, colours, fonts, and spacing, separating visual design from content structure.",
+        category:  "Web & Software",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "API",
+        full:      "Application Programming Interface",
+        hint:      "Lets two pieces of software talk to each other.",
+        answer:    "An API is a set of rules that allows different software applications to communicate. For example, a weather app uses an API to request data from a weather service and display it to the user.",
+        category:  "Web & Software",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "DOM",
+        full:      "Document Object Model",
+        hint:      "The live tree structure of a web page.",
+        answer:    "The DOM is a programming interface for web documents. It represents the page as a tree of objects so that JavaScript can read and manipulate the structure, style, and content of a web page dynamically.",
+        category:  "Web & Software",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "SEO",
+        full:      "Search Engine Optimisation",
+        hint:      "Getting your website to rank higher in search results.",
+        answer:    "SEO is the practice of improving a website so that it appears higher in search engine results pages. Techniques include using relevant keywords, improving page speed, and earning links from other websites.",
+        category:  "Web & Software",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+
+    /* ── Hardware ── */
+    {
+        acronym:   "RAM",
+        full:      "Random Access Memory",
+        hint:      "Fast, temporary memory used while a computer is running.",
+        answer:    "RAM is the short-term memory of a computer. It temporarily stores data that the CPU is actively using, allowing for fast read and write access. Data in RAM is lost when the computer is powered off.",
+        category:  "Hardware",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "ROM",
+        full:      "Read-Only Memory",
+        hint:      "Permanent memory that keeps data when power is off.",
+        answer:    "ROM is a type of non-volatile storage that retains data even when the computer is off. It typically stores firmware — the basic instructions needed to start a computer such as the BIOS.",
+        category:  "Hardware",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "CPU",
+        full:      "Central Processing Unit",
+        hint:      "The brain of the computer.",
+        answer:    "The CPU is the primary component of a computer that processes instructions. It carries out the fetch-decode-execute cycle, handling all calculations and logic operations for the operating system and applications.",
+        category:  "Hardware",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "GPU",
+        full:      "Graphics Processing Unit",
+        hint:      "Handles rendering images and video.",
+        answer:    "A GPU is a specialised processor designed to handle graphics rendering. It processes many operations simultaneously, making it ideal for displaying images and video, and increasingly for AI and data processing tasks.",
+        category:  "Hardware",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "SSD",
+        full:      "Solid State Drive",
+        hint:      "Faster storage with no moving parts.",
+        answer:    "An SSD is a storage device that uses flash memory to store data persistently. Unlike HDDs, SSDs have no moving parts, making them faster, quieter, more durable, and less prone to mechanical failure.",
+        category:  "Hardware",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "HDD",
+        full:      "Hard Disk Drive",
+        hint:      "Traditional storage using spinning magnetic platters.",
+        answer:    "An HDD is a traditional storage device that uses rotating magnetic disks to read and write data. HDDs offer large capacities at lower cost than SSDs but are slower and more fragile due to their moving parts.",
+        category:  "Hardware",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+
+    /* ── Data & Security ── */
+    {
+        acronym:   "SSL",
+        full:      "Secure Sockets Layer",
+        hint:      "The predecessor to TLS — encrypts data in transit.",
+        answer:    "SSL was the original protocol for encrypting data sent between a browser and a server. It has been superseded by TLS, but the term SSL is still commonly used to refer to this type of encryption.",
+        category:  "Data & Security",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+    {
+        acronym:   "SQL",
+        full:      "Structured Query Language",
+        hint:      "The language used to talk to databases.",
+        answer:    "SQL is a standard programming language for managing and querying relational databases. Commands like SELECT, INSERT, UPDATE and DELETE allow users to retrieve and manipulate data stored in tables.",
+        category:  "Data & Security",
+        subject:   "ICT",
+        isAcronym: true,
+        image:     ""
+    },
+
+];

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="flashcard.css">
+</head>
+<body>
+
+    <div id="print-area" style="display:none;"></div>
+
+    <div class="screen">
+
+        <h1 class="page-title">Flashcards</h1>
+
+        <!-- Subject + Category selectors -->
+        <div class="controls-bar">
+            <div class="select-group">
+                <label for="subject-select">Subject</label>
+                <select id="subject-select"></select>
+            </div>
+            <div class="select-group">
+                <label for="category-select">Category</label>
+                <select id="category-select"></select>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div id="counter" class="counter">1 / 0</div>
+
+        <!-- THE CARD (flip container) -->
+        <div class="flashcard-scene">
+            <div class="flashcard" id="flashcard">
+
+                <!-- FRONT: question side -->
+                <div class="flashcard-face flashcard-front">
+                    <div class="card-category" id="card-category"></div>
+                    <div class="card-question" id="card-question"></div>
+                    <img id="card-image" class="card-image" src="" alt="">
+                    <div class="card-hint" id="card-hint"></div>
+                    <div class="front-actions">
+                        <button class="btn btn-blue" id="hint-btn" onclick="toggleHint()">Show hint</button>
+                        <button class="btn btn-purple" onclick="revealAnswer()">Reveal answer</button>
+                    </div>
+                </div>
+
+                <!-- BACK: answer side -->
+                <div class="flashcard-face flashcard-back">
+                    <div class="card-full" id="card-full"></div>
+                    <div class="card-answer" id="card-answer"></div>
+                    <div class="back-actions">
+                        <button class="btn btn-green"  onclick="markCorrect()">Correct</button>
+                        <button class="btn btn-red"    onclick="markIncorrect()">Incorrect</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Score -->
+        <div class="score-box">
+            Correct: <span id="correct">0</span>
+            &nbsp;|&nbsp;
+            Incorrect: <span id="incorrect">0</span>
+        </div>
+
+        <!-- Navigation -->
+        <div class="btn-row">
+            <button class="btn btn-gray"   onclick="prevCard()">Previous</button>
+            <button class="btn btn-gray"   onclick="nextCard()">Next</button>
+        </div>
+
+        <!-- Tools -->
+        <div class="btn-row">
+            <button class="btn btn-blue"   onclick="loadTwentyCards()">20 card test</button>
+            <button class="btn btn-blue"   onclick="reviewIncorrect()">Review incorrect</button>
+            <button class="btn btn-gray"   onclick="printIncorrect()">Print incorrect</button>
+        </div>
+
+        <!-- Reset + dark mode -->
+        <div class="btn-row">
+            <button class="btn btn-red"    onclick="resetScores()">Reset scores</button>
+            <button class="btn btn-gray"   id="dark-btn" onclick="toggleDarkMode()">Dark mode</button>
+        </div>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="data-ict.js"></script>
+    <script src="data-economics.js"></script>
+    <script src="run.js"></script>
+</body>
+</html>

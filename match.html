@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Game</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="match.css">
+</head>
+<body>
+
+    <h1 class="page-title">Acronym Match Game</h1>
+
+    <div class="controls-bar">
+        <div class="select-group">
+            <label for="subject-select">Subject</label>
+            <select id="subject-select"></select>
+        </div>
+    </div>
+
+    <div class="info-bar">
+        <div>Moves: <span id="moves">0</span></div>
+        <div>Matches: <span id="matches">0</span> / <span id="total-pairs">8</span></div>
+    </div>
+
+    <button class="btn btn-gray" onclick="initGame()">New game</button>
+
+    <div class="board" id="board"></div>
+
+    <div class="win-box" id="win-box">
+        <p>All matched! You did it in <span id="final-moves"></span> moves.</p>
+        <button class="btn btn-purple" onclick="initGame()">Play again</button>
+    </div>
+
+    <!-- shared data + engine -->
+    <script src="config.js"></script>
+    <script src="data-ict.js"></script>
+    <script src="data-economics.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
