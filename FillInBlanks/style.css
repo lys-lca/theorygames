@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.word-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.word {
+  padding: 8px 12px;
+  background: #0078d4;
+  color: white;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.word.correct {
+  background: #16a34a;
+}
+
+.word.incorrect {
+  background: #dc2626;
+}
+
+.question {
+  padding: 12px;
+}
+
+.question:nth-child(even) {
+  background: #f0f4f8;
+}
+
+.question:nth-child(odd) {
+  background: #ffffff;
+}
+
+.drop {
+  display: inline-block;
+  width: 160px;
+  min-height: 28px;
+  border-bottom: 2px solid #000;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.hint {
+  font-style: italic;
+  color: #666;
+}
+
+button {
+  margin: 15px 5px 0 0;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
